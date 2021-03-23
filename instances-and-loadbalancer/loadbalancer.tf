@@ -3,7 +3,6 @@ resource "openstack_lb_loadbalancer_v2" "demo_lb" {
   vip_network_id = data.openstack_networking_network_v2.external.id
 }
 
-
 resource "openstack_lb_listener_v2" "listener_1" {
   protocol        = "HTTP"
   protocol_port   = 80

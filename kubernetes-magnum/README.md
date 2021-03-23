@@ -14,3 +14,9 @@ is not necessarily recommended; and this becomes more or less a "create once" te
 ## Default storageclass
 
 In order to auto create volumes on request of a PVC you need to add a storageclass. In the kubernetes_resouces folder you'll find the setup of a default using the required `cinder.csi.openstack.org` provider
+
+
+## Authentication
+
+If you use (recommended) Application Credentials (and clouds.yaml), make sure that your credentials have 'unrestricted' access. I.e. that they are allowed to create / delegate permissions. -- This is because as part of deploying your user will create credentials for your magnum cluster.
+
