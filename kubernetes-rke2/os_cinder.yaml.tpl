@@ -10,14 +10,17 @@ spec:
   bootstrap: True
   valuesContent: |-
     secret:
-     enabled: true
-     create: true
-     name: cinder-csi-cloud-config
-     data:
-       cloud-config: |-
-         [Global]
-         auth-url=${auth_url}
-         application-credential-id=${app_id}
-         application-credential-secret=${app_secret}
-         region=${region}
-         tenant-id=${project_id} 
+      enabled: true
+      create: true
+      name: cinder-csi-cloud-config
+      data:
+        cloud-config: |-
+            [Global]
+            auth-url=${auth_url}
+            application-credential-id=${app_id}
+            application-credential-secret=${app_secret}
+            region=${region}
+            tenant-id=${project_id} 
+    storageClass:
+      retain:
+        isDefault: true

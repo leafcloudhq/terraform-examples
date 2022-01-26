@@ -71,3 +71,5 @@ You can tail the logs of the cloud controller manager.
 kubectl logs -n kube-system -L app=openstack-cloud-controller-manager
 ```
 
+### Default StorageClass. 
+The template in os_cinder.yaml.tpl sets the 'retain' StorageClass to be the default. This means that if you don't specify a storageclass when creating a PVC it will not be deleted on delete of the PVC. Change this if you like a different behavior.
