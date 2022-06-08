@@ -12,7 +12,7 @@ data "openstack_networking_subnet_v2" "public_subnet" {
 module "controlplane" {
   source           = "remche/rke2/openstack"
   cluster_name     = "rke2" # change this to your liking
-  write_kubeconfig = true 
+  write_kubeconfig = true
   image_name       = "Ubuntu-20.04"
   flavor_name      = "ec1.medium"
   public_net_name  = "external"
@@ -22,7 +22,7 @@ module "controlplane" {
   boot_volume_size = 10 # change this to your desired size
   nodes_count      = 1
   nodes_net_cidr   = "192.168.40.0/22"
-  rke2_config_file = "controlplane_rke2.yaml"
+  rke2_config      = file("controlplane_rke2.yaml")
   manifests_gzb64 = {
     "cinder-csi-plugin" : local.os_cinder_b64
     "openstack-controller-manager" : local.os_ccm_b64
