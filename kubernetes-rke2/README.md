@@ -21,7 +21,7 @@ Specifically we deploy both the Cloud Controller Manager (CCM) and Cinder Contai
 - `terraform init`
 - `terraform apply`
 
-For more information and configuration options, see [terraform-openstack-rke2](github.com/remche/terraform-openstack-rke2)
+For more information and configuration options, see [terraform-openstack-rke2](https://github.com/remche/terraform-openstack-rke2)
 
 When successful, it should put a (rke2).yaml file with the credentials into the current working directory. Move this file to `~/config` and `export KUBECONFIG=~/config` to have kubectl use this config file.
 
