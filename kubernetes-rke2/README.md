@@ -1,6 +1,6 @@
 # Deploying Kubernetes to Leafcloud using Terraform and RKE2
 
-This repository shows the usage of Terraform with the [terraform-openstack-rke2](github.com/remche/terraform-openstack-rke2) provider. While we recommend using Magnum for creating and managing Kubernetes on Leafcloud, the approach outlined in this example is a good alternative if you want to use Terraform, and want to have more control.
+This repository shows the usage of Terraform with the [terraform-openstack-rke2](http://github.com/remche/terraform-openstack-rke2) provider. While we recommend using Magnum for creating and managing Kubernetes on Leafcloud, the approach outlined in this example is a good alternative if you want to use Terraform, and want to have more control.
 
 The most significant limitation is that node autoscaling is not supported.
 
