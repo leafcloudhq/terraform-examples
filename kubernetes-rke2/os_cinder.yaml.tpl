@@ -14,7 +14,7 @@ spec:
       create: true
       name: cinder-csi-cloud-config
       data:
-        cloud-config: |-
+        cloud.conf: |-
             [Global]
             auth-url=${auth_url}
             application-credential-id=${app_id}
