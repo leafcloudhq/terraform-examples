@@ -20,3 +20,6 @@ spec:
         floating-network-id: ${floating_network_id}
         floating-subnet-id: ${floating_subnet_id}
         subnet-id: ${subnet_id}
+      image:
+        repository: docker.io/k8scloudprovider/openstack-cloud-controller-manager
+        tag: "v1.24.0"
