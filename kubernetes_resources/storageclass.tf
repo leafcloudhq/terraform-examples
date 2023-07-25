@@ -1,4 +1,3 @@
-
 resource "kubernetes_storage_class" "default" {
   metadata {
     name = "cinder"
