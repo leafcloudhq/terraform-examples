@@ -3,3 +3,4 @@
 **.tfstate.backup
 **.plan
 rke2.yaml
+kubeconfig
