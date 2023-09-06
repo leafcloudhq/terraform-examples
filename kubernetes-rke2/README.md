@@ -18,6 +18,7 @@ Specifically we deploy both the Cloud Controller Manager (CCM) and Cinder Contai
 
 - Copy all files from this example to your own project
 - Edit main.tf to match your desired setup
+- Add you own keypair to the ssh_keypair_name property
 - `terraform init`
 - `terraform apply`
 

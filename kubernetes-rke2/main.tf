@@ -9,7 +9,7 @@ module "controlplane" {
   image_name       = "Ubuntu-20.04"
   flavor_name      = "ec1.medium"
   public_net_name  = "external"
-  ssh_keypair_name = "thatcher_oatcake" # change this to your own ssh key
+  #  ssh_keypair_name = "<Your custom keypain>" # change this to your own ssh key
   system_user      = "ubuntu"
   boot_from_volume = true
   boot_volume_size = 10 # change this to your desired size
