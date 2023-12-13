@@ -1,12 +1,12 @@
 data "openstack_networking_subnet_v2" "public_subnet" {
-  name = "external"
+  name = "external3"
 }
 
 module "controlplane" {
   source           = "remche/rke2/openstack"
   cluster_name     = "rke2" # change this to your liking
   write_kubeconfig = true
-  image_name       = "Ubuntu-20.04"
+  image_name       = "Ubuntu-22.04"
   flavor_name      = "ec1.medium"
   public_net_name  = "external"
   #  ssh_keypair_name = "<Your custom keypain>" # change this to your own ssh key
@@ -24,7 +24,7 @@ module "controlplane" {
 
 module "blue_node" {
   source           = "remche/rke2/openstack//modules/agent"
-  image_name       = "Ubuntu-20.04"
+  image_name       = "Ubuntu-22.04"
   nodes_count      = 1
   name_prefix      = "blue"
   flavor_name      = "ec1.large"
